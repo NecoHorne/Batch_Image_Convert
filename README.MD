@@ -10,15 +10,15 @@ Clone or download the repo.
 ### Using the script
 1. Copy the `compression.sh` file and add it to your project root.
 2. In your terminal cd to the project root. 
-3. The script takes 2 arguments, the relative path from root to the folder that containes the images you would like to conpress and the relative path to the folder that will contain the compressed images.
+3. The script takes 2 arguments, the relative path from root to the folder that contains the images you would like to compress and the relative path to the folder that will contain the compressed images.
 
-#### Unix comand
-run `./compression.sh <PATH1> <PATH2>`
+#### Unix command
+run `./compression.sh PATH1 PATH2`
 #### On Windows
-run `compression.sh <PATH1> <PATH2>`
+run `compression.sh PATH1 PATH2`
 
 ### Changing quality and resize %
-if you open the script you can chan%e the variables for rezise and quality as needed
+if you open the script you can chan%e the variables for resize and quality as needed
 ```
 ...
 resize=50
