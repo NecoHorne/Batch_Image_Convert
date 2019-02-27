@@ -1,5 +1,5 @@
 # Batch Image Convert Script
-This is a simple batch script that utilises ImageMagic to resize and compress image assets also creating a compressed wepb version of the images. 
+This is a simple batch script that utilises ImageMagic to resize and compress image assets also creating a compressed `*.webp` version of the images. 
 ## Getting Started
 Clone or download the repo.
 ### Prerequisites
