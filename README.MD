@@ -5,7 +5,7 @@ Clone or download the repo.
 ### Prerequisites
 1. On a windows machine you will need to have something like git bash installed to run this script. [Git BASH](https://gitforwindows.org/)
 2. Ensure git bash is in your PATH variable. 
-3. This script utilises [ImageMagick](https://www.imagemagick.org/) so make sure to install it, on the installation window ensure to check the `Install legacy utilities` and `Add application directory to your system path` boxes
+3. This script utilises [ImageMagick](https://www.imagemagick.org/) so make sure to install it, on the installation window ensure to check the `Install legacy utilities` and `Add application directory to your system path` boxes. [(ImageMagic Repo)](https://github.com/ImageMagick/ImageMagick)
 
 ### Using the script
 1. Copy the `compression.sh` file and add it to your project root.
