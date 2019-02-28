@@ -4,7 +4,6 @@
 # versions in another target directory.
 # Keep this script in the root directory
 # ARG1 = directory containing the images you want to convert, Path relative to root
-# ARG2 = target directory where new files will be added, Path relative to root
 
 # give this script the correct permissions
 chmod +x compression.sh
