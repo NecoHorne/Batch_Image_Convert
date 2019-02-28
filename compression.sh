@@ -55,7 +55,9 @@ for file in ${target}/*; do
     cd
     cd ${target}
     for pic in ${directory}/$(basename "${file}")/$(basename "${sub}")/* ; do
+    if [[ ${pic} == *.WEBP ]]; then
         mv -- "${pic}" "${pic%.WEBP}.webp"
+    fi
         ((count++))
     done
     done
