@@ -9,36 +9,36 @@
 # give this script the correct permissions
 chmod +x compression.sh
 
+# VARIABLES
 GREEN='\033[0;32m'
 PURPLE='\033[0;35m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
-
-# When script executes the target directory will be the root + relative path of target directory
 root=${PWD}
 target=${root}/$1
-directory=${root}/webReady
+web="webReady"
+directory=${root}/${web}
 resize=80
 quality=30
 webpQ=50
 
-# Make a copy of the directory in a new directory called webReady realtaive to root.
+# Make a copy of the directory in a new directory called webReady relative to root.
 printf "${PURPLE}Creating webReady directory...${NC}\n"
 cd $1
 find . -type d >dirs.txt
 mv dirs.txt ${root}
 cd
 cd ${root}
-mkdir webReady
-mv dirs.txt webReady
-cd webready
+mkdir ${web}
+mv dirs.txt ${web}
+cd ${web}
 xargs mkdir -p <dirs.txt
 rm dirs.txt
 printf "${GREEN}Directory Created${NC}\n"
-# Go to target Directory
+
+# Go to target Directory and iterate over folders
 cd
 cd ${target}
-# For Each folder in the directory
 printf "${YELLOW}Starting processing, This may take a few minutes depending on how many files are processed${NC}\n"
 for file in ${target}/*; do
     for sub in ${file}/* ; do
@@ -57,6 +57,6 @@ for file in ${target}/*; do
     done
 done
 printf "${GREEN}Processing Complete${NC}\n"
-printf "Press Enter to continue\n"
+printf "${GREEN}Press Enter to continue...${NC}\n"
 read
 
