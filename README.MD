@@ -13,7 +13,7 @@ Clone or download the repo.
 ### Using the script
 1. Copy the `compression.sh` file and add it to your project root.
 2. In your terminal cd to the project root. 
-3. The script takes 1 argument2, the relative path from root to the Directory you want to run through and compress all images.
+3. The script takes 1 argument, the relative path from root to the Directory you want to run through and compress all images.
 
 #### Unix command
 run `./compression.sh PATH` <br>
