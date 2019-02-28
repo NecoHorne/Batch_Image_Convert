@@ -33,12 +33,11 @@ mkdir webReady
 mv dirs.txt webReady
 cd webready
 xargs mkdir -p <dirs.txt
+rm dirs.txt
 printf "${GREEN}Directory Created${NC}\n"
-
 # Go to target Directory
 cd
 cd ${target}
-
 # For Each folder in the directory
 printf "${YELLOW}Starting processing, This may take a few minutes depending on how many files are processed${NC}\n"
 for file in ${target}/*; do
@@ -58,6 +57,6 @@ for file in ${target}/*; do
     done
 done
 printf "${GREEN}Processing Complete${NC}\n"
-printf "Press Enter to continue"
+printf "Press Enter to continue\n"
 read
 
