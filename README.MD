@@ -23,7 +23,7 @@ run `compression.sh PATH` <br>
 example: `compression.sh uploads`
 
 ### Changing quality and resize %
-if you open the script you can chan%e the variables for resize and quality as needed, the below is so far what I found to work best. 
+if you open the script you can change the variables for resize and quality as needed, the below is so far what I found to work best. 
 ```
 ...
 resize=80
@@ -32,13 +32,7 @@ webpQ=50
 ...
 ```
 
-### Issues
-When using Wordpress plugins to serve the `*.webp` files some issues were found.
-#### Fixes:
-For this fix you will have to rename all the extensions from .WEBP to .webp or the plugin will not serve the files, (I suspect a regex issue)
-
-On Windows you can cd to the directory containing the webp files and run `ren *.WEBP *.webp` <br>
-On unix you you should find the appropriate rename command for your distro. <br>
+### Wordpress
 On wordpress use the [WebP Express](https://wordpress.org/plugins/webp-express) plugin with the below settings. <br>
  
 ![webpsettings.png](https://pichub.site/images/2019/02/27/webpsettings.png)

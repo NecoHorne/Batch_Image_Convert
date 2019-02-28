@@ -20,6 +20,7 @@ directory=${root}/${web}
 resize=80
 quality=30
 webpQ=50
+count=0
 
 # Make a copy of the directory in a new directory called webReady relative to root.
 printf "${PURPLE}Creating webReady directory...${NC}\n"
@@ -53,9 +54,13 @@ for file in ${target}/*; do
     magick mogrify -format WEBP -path ${directory}/$(basename "${file}")/$(basename "${sub}") -quality ${webpQ}% -define webp:lossless=true *.JPEG
     cd
     cd ${target}
+    for pic in ${directory}/$(basename "${file}")/$(basename "${sub}")/* ; do
+        mv -- "${pic}" "${pic%.WEBP}.webp"
+        ((count++))
+    done
     done
 done
-printf "${GREEN}Processing Complete${NC}\n"
+printf "${GREEN}Processing Complete...\n ${count} files created...${NC}\n"
 printf "${GREEN}Press Enter to continue...${NC}\n"
 read
 
