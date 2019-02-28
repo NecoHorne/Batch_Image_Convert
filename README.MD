@@ -1,5 +1,8 @@
 # Batch Image Convert Script
-This is a simple batch script that utilises ImageMagic to resize and compress image assets also creating a compressed `*.webp` version of the images. 
+This is a simple batch script that utilises ImageMagic to resize and compress image assets also creating a compressed `*.webp` version of the images.
+This script was written to easily compress images in a wordpress uploads folder.<br>
+
+Running the script will create a new folder in the root directory called `webReady` that contains a directory structure exactly the same as the original but containing the compressed and webp images.
 ## Getting Started
 Clone or download the repo.
 ### Prerequisites
@@ -10,12 +13,14 @@ Clone or download the repo.
 ### Using the script
 1. Copy the `compression.sh` file and add it to your project root.
 2. In your terminal cd to the project root. 
-3. The script takes 2 arguments, the relative path from root to the folder that contains the images you would like to compress and the relative path to the folder that will contain the compressed images.
+3. The script takes 1 argument2, the relative path from root to the Directory you want to run through and compress all images.
 
 #### Unix command
-run `./compression.sh PATH1 PATH2`
+run `./compression.sh PATH` <br>
+example: `./compression.sh uploads`
 #### On Windows
-run `compression.sh PATH1 PATH2`
+run `compression.sh PATH` <br>
+example: `compression.sh uploads`
 
 ### Changing quality and resize %
 if you open the script you can chan%e the variables for resize and quality as needed, the below is so far what I found to work best. 
